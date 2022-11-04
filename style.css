@@ -1,0 +1,141 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    display: inline-block;
+    flex: 1;
+    flex-direction: row;
+}
+
+body {
+    background-image: url(./image/background.jpg);
+    background-size: cover;
+    position: center;
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    margin: 0 auto;
+
+}
+#sidebar {
+    background-color: rgba(49, 49, 49, 0.387);
+    visibility: hidden;
+}
+
+#sidebar-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 8em;
+    height: 60%;
+    margin: 1em;
+    margin-top: 4em;
+    background-color: transparent;
+
+}
+
+
+
+/*learned this clever checkbox trick from W3Schools, changed attributes to fit better on my site*/
+#hamburger-icon span{
+    display: block;
+    margin: 6px;
+    height: 6px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -o-transition: .3s linear;
+    transition: .3s linear;
+}
+input[type="checkbox"]{
+    display: none;
+
+}
+#hamburger-icon {
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+#hamburger:checked ~ #hamburger-icon span:nth-child(1){
+    -webkit-transform: rotate(135deg) translate(10px, -8px);
+    -o-transform: rotate(135deg) translate(10px, -8px);
+    -moz-transform: rotate(135deg) translate(10px, -8px);
+    transform: rotate(135deg) translate(10px, -8px);
+}
+
+#hamburger:checked ~ #hamburger-icon span:nth-child(2){
+    opacity: 0;
+}
+
+#hamburger:checked ~ #hamburger-icon span:nth-child(3){
+    -webkit-transform: rotate(-135deg) translate(9px, 8px);
+    -moz-transform: rotate(-135deg) translate(9px, 8px);
+    -o-transform: rotate(-135deg) translate(9px, 8px);
+    transform: rotate(-135deg) translate(9px, 8px);
+}
+
+#hamburger:checked ~ #sidebar {
+    visibility: visible;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: auto 3em;
+    display: block;
+}
+
+#resumé, .regular {
+    background-color: transparent;
+    border: none;
+    padding: 5px 0px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.8em;
+}
+
+a {
+    justify-content: space-between;
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+.current-page {
+display: normal;
+}
+
+.hidden-page {
+    display: none;
+}
+
+#home {
+    
+}
+
+#about-me {
+   
+}
+
+#projects {
+    
+}
+
+#resumé {
+
+}
+
+#contact {
+}

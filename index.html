@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rory Van Blaricom | Software Developer</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    
+        <input type="checkbox" id="hamburger">
+        <label id="hamburger-icon" for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <aside id="sidebar">
+            <nav id="sidebar-menu">
+                
+                <button class="regular">Home</button>
+                <button class="regular">About Me</button>
+                <button class="regular">Projects</button>
+            
+                <a  href="#">
+                    <button id="resumé">Resumé</button>
+                </a>
+            
+                <button class="regular">Contact</button>
+            
+                <a class="image" href="https://github.com/RoryV91" target="_tab">
+                    <img src="./image/GitHub_Logo1.png" alt="GitHub link" width="90px">
+                </a>
+
+                <a class="image" href="https://www.linkedin.com/in/rory-van-blaricom/" target="_tab">
+                    <img src="./image/LI-Logo.png" alt="LinkedIn link" width="90px">
+                </a>
+            </nav>
+        
+        </aside>
+    <section id="home" class="hidden-page">
+        <h1>Rory Van Blaricom</h1>
+        <br />
+        <h3>Software Engineer</h3>
+    </section>
+
+    <section id="about-me" class="current-page">
+        <h4>I am a detail oriented and objective driven  software engineer. I have a passion for solving complex problems with a practical approach. I am inspired by all the technological innovation that shapes the world around us, and want to contribute in a meaningful way.</h4>
+    </section>
+
+    <section id="projects" class="hidden-page">
+        <h4>projects page</h4>
+    </section>
+
+    <section id="contact" class="hidden-page">
+        <h1>Contact Me</h1>
+        <input type="email" id="email" placeholder="yourname@domain.com">
+       <input type="text" id="message" placeholder="write a short mesage here">
+        <input type="submit">
+    </section>
+</body>
+
+</html>
