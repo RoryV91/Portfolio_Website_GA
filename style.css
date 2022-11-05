@@ -1,6 +1,6 @@
 html, body {
     height: 100vh;
-    width: 100;
+    width: 100vw;
 }
 
 body {
@@ -38,7 +38,8 @@ textarea {
     background-color: rgba(49, 49, 49, 0.387);
     visibility: hidden;
     display: flex;
-    height: 100vh;
+    height: 98vh;
+    width: 20vw;
     position: fixed;
 }
 
@@ -47,7 +48,7 @@ textarea {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    width: 8em;
+    width: 90%;
     height: 80%;
     margin: 1em;
     margin-top: 4em;
@@ -105,12 +106,6 @@ input[type="checkbox"]{
 }
 
 
-/* section {
-    display: flex;
-    align-items: center;
-    align-content: space-evenly;
-} */
-
 #resumé, .regular {
     background-color: transparent;
     border: none;
@@ -137,7 +132,6 @@ img {
 
 .current-page {
 display: normal;
-max-width: max-content;
 box-sizing: border-box;
 }
 
@@ -145,6 +139,15 @@ box-sizing: border-box;
     display: none;
 }
 
+section {
+    display: flex; 
+    flex-direction: column;
+    justify-items: center;
+    margin: auto;
+}
+
+
+/* 
 #home {
     display: flex;
     flex-direction: column;
@@ -161,11 +164,4 @@ box-sizing: border-box;
 
 #resumé {
 
-}
-
-#contact div {
-    margin: auto 8em;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-}
+} */

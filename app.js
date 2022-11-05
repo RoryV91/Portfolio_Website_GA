@@ -1,13 +1,11 @@
-// Define Vars
+
 const pages = document.getElementsByTagName("section")
 const buttons = document.getElementsByTagName("button")
 
-
+//function for buttons to determine current page/section
 function onClickHandle(event) {
-    console.log(event)
     const pageId = event.target.innerText.toLowerCase().replaceAll(' ', '-')
 
-    // loop over all the pages
     for (let i = 0; i < pages.length; i++) {
         if (pageId === pages[i].id) {
             pages[i].className = "current-page"
@@ -22,5 +20,10 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', onClickHandle)
 }
 
-//textbox
 
+//small function to make sure home section displays on page load
+function homePage() {
+    document.getElementById("home").className = "current-page"
+}
+
+window.onload = homePage()
