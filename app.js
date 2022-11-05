@@ -21,3 +21,6 @@ function onClickHandle(event) {
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', onClickHandle)
 }
+
+//textbox
+

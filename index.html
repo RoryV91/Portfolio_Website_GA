@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rory Van Blaricom | Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
@@ -41,13 +44,12 @@
             </nav>
         
         </aside>
-    <section id="home" class="hidden-page">
+    <section id="home" class="current-page">
         <h1>Rory Van Blaricom</h1>
-        <br />
         <h3>Software Engineer</h3>
     </section>
 
-    <section id="about-me" class="current-page">
+    <section id="about-me" class="hidden-page">
         <h4>I am a detail oriented and objective driven  software engineer. I have a passion for solving complex problems with a practical approach. I am inspired by all the technological innovation that shapes the world around us, and want to contribute in a meaningful way.</h4>
     </section>
 
@@ -56,10 +58,14 @@
     </section>
 
     <section id="contact" class="hidden-page">
-        <h1>Contact Me</h1>
+        <div>
+        
+        <h3>Contact Me</h3>
+        
         <input type="email" id="email" placeholder="yourname@domain.com">
-       <input type="text" id="message" placeholder="write a short mesage here">
-        <input type="submit">
+        <textarea name="message" placeholder="write a short mesage here" cols="50" rows="10"></textarea>
+        <input type="submit" id="submit">
+    </div>    
     </section>
 </body>
 
