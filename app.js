@@ -13,17 +13,17 @@ function onClickHandle(event) {
             pages[i].className = "hidden-page"
         }
     }
-
 }
 
+//event listener to change page based on button click
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', onClickHandle)
 }
 
-
-//small function to make sure home section displays on page load
+//small function to make sure home section displays on page load, with menu closed
 function homePage() {
     document.getElementById("home").className = "current-page"
+    document.getElementById("hamburger").checked = false;
 }
 
 window.onload = homePage()

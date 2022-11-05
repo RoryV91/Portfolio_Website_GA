@@ -7,31 +7,126 @@ body {
     background-image: url(./image/background.jpg);
     background-size: cover;
     display: flex;
-    align-content: center;
-    justify-items: center;
     z-index: 1;
 }
 
+section {
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: center;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.current-page {
+display: flex;
+box-sizing: border-box;
+}
+
+.hidden-page {
+    display: none;
+}
+
 h1 {
-    font-family: "Lusitana", "serif";
+    display: flex;
+    font-family: 'Mochiy Pop P One', sans-serif;
     font-style: bold;
-    font-weight: 700;
-    font-size: 5em;
+    font-size: 4em;
+    flex-wrap: wrap;
     color: black;
 }
 
 h3 {
+    display: flex;
+    font-family: 'Mochiy Pop P One', sans-serif;    
+    font-size: 3em;
+    color: rgb(74, 249, 179);
+}
 
+p{
+    font-family: "Lusitana", "serif";
+    color: whitesmoke;
+    font-size: 2em;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.logo {
+    width: 85%;
+    margin-left: 10%;
+}
+
+.photo {
+    width: 20vw;
+    border: 1vh solid rgb(74, 249, 179);
+    border-radius: 5vw;
+}
+
+a {
+    justify-content: space-between;
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+}
+
+#resumé, .regular {
+    background-color: transparent;
+    border: none;
+    padding: 5px 0px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 2em;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: whitesmoke;
+}
+
+#resumé:hover, .regular:hover {
+    color: rgb(74, 249, 179);
 }
 
 textarea {
+    display: flex;
     resize: none;
+    background-color: rgba(49, 49, 49, 0.387);
+    color: rgb(74, 249, 179);
     font-family: "Lusitana", "serif";
-    margin-top: 3em;
+    margin-top: 5vh;
+}
+
+#projects, #contact {
+    margin-top: 5vh;
 }
 
 #email {
-    font-family: "Lusitana", "serif";
+    display: flex;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: rgba(49, 49, 49, 0.387);
+    color: rgb(74, 249, 179);
+}
+
+#submit {
+    display: flex;
+    border: none;
+    border-radius: 1em;
+    margin-top: 2vh;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 1.5em;
+    color: black;
+    cursor: pointer;
+    opacity: 0.6;
+    background-color: rgb(74, 249, 179);
+}
+
+#submit:hover {
+    opacity: 1;
 }
 
 #sidebar {
@@ -39,8 +134,12 @@ textarea {
     visibility: hidden;
     display: flex;
     height: 98vh;
-    width: 20vw;
+    width: 25vw;
     position: fixed;
+    -webkit-transition: .35s linear;
+    -moz-transition: .35s linear;
+    -o-transition: .35s linear;
+    transition: .35s linear;
 }
 
 #sidebar-menu {
@@ -50,16 +149,20 @@ textarea {
     justify-content: space-between;
     width: 90%;
     height: 80%;
-    margin: 1em;
-    margin-top: 4em;
+    margin: 15% 10%;
+    margin-top: 3em;
     background-color: transparent;
     z-index: 2;
+    -webkit-transition: .4s linear;
+    -moz-transition: .4s linear;
+    -o-transition: .4s linear;
+    transition: .4s linear;
 }
 
 
 
-/*learned this clever checkbox trick from W3Schools, changed attributes to fit better on my site*/
-#hamburger-icon span{
+/*learned this clever trick called checkbox hack from W3Schools, changed attributes to fit better on my site*/
+#hamburger-icon span {
     display: block;
     margin: 6px;
     height: 6px;
@@ -72,8 +175,13 @@ textarea {
     -o-transition: .3s linear;
     transition: .3s linear;
 }
+
 input[type="checkbox"]{
     display: none;
+}
+
+#hamburger-icon:hover{
+    background-color: rgb(74, 249, 179);
 }
 
 #hamburger-icon {
@@ -105,63 +213,3 @@ input[type="checkbox"]{
     visibility: visible;
 }
 
-
-#resumé, .regular {
-    background-color: transparent;
-    border: none;
-    padding: 5px 0px;
-    width: 100%;
-    cursor: pointer;
-    font-size: 1.8em;
-    font-family: "Lusitana", "serif";
-    font-weight: bold;
-    color: whitesmoke;
-}
-
-a {
-    justify-content: space-between;
-    background-color: transparent;
-    width: 100%;
-    cursor: pointer;
-}
-
-img {
-    width: 100%;
-}
-
-
-.current-page {
-display: normal;
-box-sizing: border-box;
-}
-
-.hidden-page {
-    display: none;
-}
-
-section {
-    display: flex; 
-    flex-direction: column;
-    justify-items: center;
-    margin: auto;
-}
-
-
-/* 
-#home {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-}
-
-#about-me {
-    margin: auto 3em; 
-}
-
-#projects {
-    
-}
-
-#resumé {
-
-} */
