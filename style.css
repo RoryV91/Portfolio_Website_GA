@@ -17,9 +17,9 @@ section {
     justify-items: center;
     margin: auto;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
-
 
 
 .current-page {
@@ -66,6 +66,18 @@ p{
     border-radius: 5vw;
 }
 
+.thumb {
+    width: 15vw;
+    margin: 2.5vw;
+}
+
+#thmubnails {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+
 a {
     justify-content: space-between;
     background-color: transparent;
@@ -99,7 +111,9 @@ textarea {
     margin-top: 5vh;
 }
 
-#projects, #contact {
+#projects 
+
+#contact {
     margin-top: 5vh;
 }
 

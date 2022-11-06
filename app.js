@@ -24,6 +24,22 @@ for (let i = 0; i < buttons.length; i++) {
 function homePage() {
     document.getElementById("home").className = "current-page"
     document.getElementById("hamburger").checked = false;
+    document.getElementById("message").value = "";
+    document.getElementById("email").value = "";
 }
 
 window.onload = homePage()
+
+//submit button for contact form
+
+    document.getElementById("submit").addEventListener("click", submitForm)
+
+    function submitForm() {
+        if (confirm("Do you want to submit this message?")) {
+            alert("Message Sent! Thank you for your response!")
+            document.getElementById("message").value = "";
+            document.getElementById("email").value = "";
+        }
+    }
+
+//modals for projects
