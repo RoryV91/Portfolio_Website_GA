@@ -7,7 +7,6 @@ body {
     background-image: url(./image/background.jpg);
     background-size: cover;
     display: flex;
-    z-index: 1;
 }
 
 section {
@@ -20,7 +19,41 @@ section {
     justify-content: space-between;
     box-sizing: border-box;
 }
+.modal{
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.733);
+}
 
+.content {
+    width: 100%;
+    display: block;
+    position: fixed;
+    text-align: center;
+    margin-top: 30vh;
+}
+.mdlimg {
+    width: 40vw; 
+    width: 300px;
+}
+.close{
+    position: fixed;
+    color: grey;
+    float: inline-end;
+    font-size: 3em;
+    cursor: pointer;
+    top: 0vh;
+    right: 2vw;
+}
+
+.close:hover {
+    color:rgb(74, 249, 179)
+}
 
 .current-page {
 display: flex;
@@ -45,6 +78,7 @@ h3 {
     font-family: 'Mochiy Pop P One', sans-serif;    
     font-size: 3em;
     color: rgb(74, 249, 179);
+    margin-top: 1vh;
 }
 
 p{
@@ -53,6 +87,12 @@ p{
     font-size: 2em;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .logo {
@@ -67,15 +107,19 @@ p{
 }
 
 .thumb {
-    width: 15vw;
-    margin: 2.5vw;
+    width: 18vw;
+    min-width: 100px;
+    margin: 2vw;
+    border: 1vh solid rgb(74, 249, 179);
+    border-radius: 5vw;
+    cursor: pointer;
 }
 
-#thmubnails {
+#thumbnails {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    width: 50vw;
+    align-content: space-evenly;
 }
 
 a {
@@ -111,10 +155,14 @@ textarea {
     margin-top: 5vh;
 }
 
-#projects 
+#projects {
+    width: 70vw;
+} 
 
 #contact {
-    margin-top: 5vh;
+    justify-content: center;
+    margin: auto;
+
 }
 
 #email {
@@ -137,6 +185,7 @@ textarea {
     cursor: pointer;
     opacity: 0.6;
     background-color: rgb(74, 249, 179);
+    z-index: 1;
 }
 
 #submit:hover {
@@ -150,6 +199,7 @@ textarea {
     height: 98vh;
     width: 25vw;
     position: fixed;
+    z-index: 2;
     -webkit-transition: .35s linear;
     -moz-transition: .35s linear;
     -o-transition: .35s linear;
@@ -202,7 +252,7 @@ input[type="checkbox"]{
     position: fixed;
     margin-top: 0px;
     margin-left: 0px;
-    z-index: 2;
+    z-index: 3;
 }
 
 #hamburger:checked ~ #hamburger-icon span:nth-child(1){
@@ -225,5 +275,38 @@ input[type="checkbox"]{
 
 #hamburger:checked ~ #sidebar {
     visibility: visible;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        text-align: center;
+        background-position: center;      
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.5em;
+        text-align: left;
+        width: 80%;
+        word-wrap: normal;
+        margin: auto;
+    }
+    section {
+        justify-items: center;
+    }
+    #sidebar {
+        width: 50vw;
+        background-color: rgb(74, 249, 179);
+    }
+    #resumé, .regular {
+        color: black;
+    }
+    #email {
+        font-size: 1em;
+    }
 }
 

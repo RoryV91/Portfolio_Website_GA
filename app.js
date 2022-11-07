@@ -13,6 +13,7 @@ function onClickHandle(event) {
             pages[i].className = "hidden-page"
         }
     }
+    document.getElementById("hamburger").checked = false;
 }
 
 //event listener to change page based on button click
@@ -42,4 +43,52 @@ window.onload = homePage()
         }
     }
 
-//modals for projects
+//modals for projects (time crunch, not the most proud of its un-DRY-ness)
+const big1 = document.getElementById("modal1")
+const big2 = document.getElementById("modal2")
+const big3 = document.getElementById("modal3")
+const big4 = document.getElementById("modal4")
+const closeX1 = document.querySelectorAll("#x1")[0];
+const closeX2 = document.querySelectorAll("#x2")[0];
+const closeX3 = document.querySelectorAll("#x3")[0];
+const closeX4 = document.querySelectorAll("#x4")[0];
+
+// closeX1.onclick = function() {
+//     big1.style.display = "none"
+// }
+closeX1.addEventListener("click", closedX1);
+function closedX1() {
+    big1.style.display = "none"
+}
+closeX2.addEventListener("click", closedX2);
+function closedX2() {
+    big2.style.display = "none"
+}
+closeX3.addEventListener("click", closedX3);
+function closedX3() {
+    big3.style.display = "none"
+}
+closeX4.addEventListener("click", closedX4);
+function closedX4() {
+    big4.style.display = "none"
+}
+
+document.getElementById("one").addEventListener("click", clickedOne);
+function clickedOne() { 
+    big1.style.display = "block"
+}
+
+document.getElementById("two").addEventListener("click", clickedTwo);
+function clickedTwo() { 
+    big2.style.display = "block"
+}
+
+document.getElementById("three").addEventListener("click", clickedThree);
+function clickedThree() { 
+    big3.style.display = "block"
+}
+
+document.getElementById("four").addEventListener("click", clickedFour);
+function clickedFour() { 
+    big4.style.display = "block"
+}
