@@ -22,6 +22,7 @@ section {
 .modal{
     display: none;
     position: fixed;
+    font-size: 1em;
     left: 0px;
     top: 0px;
     z-index: 4;
@@ -39,7 +40,6 @@ section {
 }
 .mdlimg {
     width: 40vw; 
-    width: 300px;
 }
 .close{
     position: fixed;
@@ -127,6 +127,10 @@ a {
     background-color: transparent;
     width: 100%;
     cursor: pointer;
+}
+
+a:hover {
+    color:rgb(74, 249, 179);
 }
 
 #resumé, .regular {
